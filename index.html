@@ -400,9 +400,9 @@ td.nd{color:var(--n400);font-style:italic}
 .step.is-agent .v{color:#fff;font-weight:600}
 .step.is-result .k i{background:var(--green-500);color:#04302B}
 .step.is-result .k span{color:var(--green-300)}
-.pre{margin-top:auto;padding-top:16px;border-top:1px solid rgba(186,244,233,.18)}
-.pre .lb{font-size:9.8px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--lime)}
-.pre p{margin-top:7px;font-size:13.6px;color:var(--green-100);line-height:1.5;max-width:70ch}
+.agent-pre{margin-top:auto;padding-top:16px;border-top:1px solid rgba(186,244,233,.18)}
+.agent-pre .lb{font-size:9.8px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--lime)}
+.agent-pre p{margin-top:7px;font-size:13.6px;color:var(--green-100);line-height:1.5;max-width:70ch}
 .anim > *{animation:stepin .34s var(--ease) both}
 .anim > *:nth-child(2){animation-delay:.05s}
 .anim > *:nth-child(3){animation-delay:.1s}
@@ -530,7 +530,7 @@ td.nd{color:var(--n400);font-style:italic}
       <button class="tile" data-go="s5"><span class="n num">05</span><span class="t">Portafolio y geografía</span><span class="d">Quince marcas, seis categorías, cuatro países declarados</span></button>
       <button class="tile" data-go="s6"><span class="n num">06</span><span class="t">Benchmark competitivo</span><span class="d">Qué publican los comparables que Norjal todavía no publica</span></button>
       <button class="tile" data-go="s7"><span class="n num">07</span><span class="t">Implicaciones de ejecución</span><span class="d">Cinco consecuencias operativas de la tesis</span></button>
-      <button class="tile live" data-go="s8"><span class="n num">08</span><span class="t">IA y agentes</span><span class="d">Seis decisiones repetitivas que pueden acelerarse hoy</span></button>
+      <button class="tile live" data-go="s8"><span class="n num">08</span><span class="t">IA y agentes</span><span class="d">Siete decisiones repetitivas que pueden acelerarse hoy</span></button>
       <button class="tile" data-go="s9"><span class="n num">09</span><span class="t">Datos y ecosistema digital</span><span class="d">Tres bifurcaciones que cambian el alcance del trabajo</span></button>
       <button class="tile" data-go="s10"><span class="n num">10</span><span class="t">Outlook 2026–2029</span><span class="d">Escenario base, de aceleración y de presión</span></button>
       <button class="tile" data-go="s11"><span class="n num">11</span><span class="t">Hipótesis</span><span class="d">Seis hipótesis formuladas para poder ser refutadas</span></button>
@@ -991,34 +991,10 @@ td.nd{color:var(--n400);font-style:italic}
     </p>
 
     <div class="body">
-      <h3 class="sub">Mapa cualitativo del portafolio</h3>
-      <div class="plot">
-        <div class="field"></div>
-        <div class="axY"><span>Rotación programada</span><span>Activación cultural</span></div>
-        <div class="axX"><span>Marca representada</span><span>Marca propia</span></div>
-        <div class="bub me" style="left:82%;bottom:84%;width:96px;height:96px">Akipika<br>+ Chupa&nbsp;Loka</div>
-        <div class="bub b" style="left:80%;bottom:52%;width:66px;height:66px">Akikids</div>
-        <div class="bub a" style="left:70%;bottom:35%;width:64px;height:64px">Fitchips</div>
-        <div class="bub c" style="left:74%;bottom:20%;width:70px;height:70px">Abuyoya<br>Rollito</div>
-        <div class="bub d" style="left:19%;bottom:26%;width:72px;height:72px">Canel's</div>
-        <div class="bub c" style="left:30%;bottom:62%;width:66px;height:66px">Gumi&nbsp;Yum</div>
-        <div class="bub d" style="left:16%;bottom:56%;width:62px;height:62px">Bondy<br>Fiesta</div>
-        <div class="bub d" style="left:32%;bottom:30%;width:62px;height:62px">Lucky<br>Gummys</div>
-        <div class="bub d" style="left:22%;bottom:12%;width:66px;height:66px">Kuii · Gisa<br>Barrinola</div>
-        <div class="bub d" style="left:44%;bottom:14%;width:68px;height:68px">Wonderful<br>Pistachios</div>
-      </div>
-      <p class="cap">
-        <b>Ubicación cualitativa derivada del análisis, no un scoring numérico.</b> Los ejes son interpretación de
-        LCG a partir del portafolio publicado en norjal.com/portafolio (mayo de 2026) y de la actividad pública de
-        cada marca. El tamaño de las burbujas es ilustrativo y no representa volumen, venta ni margen: Norjal no
-        publica esa información y no la estimamos. La titularidad de Barrinola, Gisa, Kuii, Ricaleta, Tinajita y
-        Wonderful Pistachios en México no pudo verificarse con fuentes públicas.
-      </p>
-
       <div class="g2">
         <div class="panel">
           <h3 class="sub">Portafolio declarado</h3>
-          <div class="g2" style="margin-top:14px;gap:10px">
+          <div style="display:grid;grid-template-columns:1fr 1fr;margin-top:14px;gap:10px">
             <div class="stat cream" style="min-height:118px"><div class="v num">5</div><div class="l">Marcas propias listadas</div></div>
             <div class="stat cream" style="min-height:118px"><div class="v num">10</div><div class="l">Marcas representadas listadas</div></div>
             <div class="stat cream" style="min-height:118px"><div class="v num">20<sup>+</sup></div><div class="l">Marcas activas declaradas por la compañía</div></div>
@@ -1121,14 +1097,6 @@ td.nd{color:var(--n400);font-style:italic}
               <td>EE.UU., Colombia y Honduras declarados; marca propia registrada en USPTO</td>
             </tr>
             <tr>
-              <td>Comercializadora KRAM<br><span class="small">Tultitlán, Edo. Mex.</span></td>
-              <td>Representación con exclusividades de alto perfil en confitería y chocolate</td>
-              <td class="nd">No publicada en la fuente disponible</td>
-              <td>Fill rate, venta perdida y productividad de picking medidos y reportados</td>
-              <td class="nd">No publicada en la fuente disponible</td>
-              <td>Importación</td>
-            </tr>
-            <tr>
               <td>SINAX Corporation<br><span class="small">CDMX, con oficina en Guadalajara</span></td>
               <td>Representación multicategoría + línea propia</td>
               <td>Almacén propio en CDMX; oficinas en Guadalajara y Monterrey</td>
@@ -1165,8 +1133,8 @@ td.nd{color:var(--n400);font-style:italic}
       </div>
       <p class="scrollhint">Desliza horizontalmente para ver la tabla completa.</p>
       <p class="cap">
-        Fuentes: sitios corporativos de cada compañía, consultados en septiembre de 2026, y carta de recomendación
-        de Comercializadora KRAM de junio de 2026. Todas las cifras son autodeclaradas por cada empresa y no son
+        Fuentes: sitios corporativos de cada compañía, consultados en septiembre de 2026.
+        Todas las cifras son autodeclaradas por cada empresa y no son
         auditables ni homogéneas entre sí. Las celdas marcadas como información pública no identificada se dejaron
         vacías a propósito: no se estimó ningún valor.
       </p>
@@ -1177,7 +1145,6 @@ td.nd{color:var(--n400);font-style:italic}
         <div class="axY"><span>Publica alcance</span><span>Publica ejecución medida</span></div>
         <div class="axX"><span>Solo ejecuta o representa</span><span>Desarrolla marca propia</span></div>
         <div class="bub me" style="left:76%;bottom:22%;width:92px;height:92px">Norjal</div>
-        <div class="bub b" style="left:34%;bottom:78%;width:78px;height:78px">KRAM</div>
         <div class="bub a" style="left:62%;bottom:44%;width:76px;height:76px">Nyjisa</div>
         <div class="bub c" style="left:48%;bottom:24%;width:74px;height:74px">SINAX</div>
         <div class="bub d" style="left:14%;bottom:84%;width:80px;height:80px">Grupo<br>Prom</div>
@@ -1196,16 +1163,19 @@ td.nd{color:var(--n400);font-style:italic}
         <p>
           Ninguno de los comparables gana el argumento con el número de puntos de venta. Grupo Prom dice
           <b>11,321 pisos atendidos al mes</b>. EATICS dice <b>1,800 visitas al mes</b>. Nyjisa dice cajas al año y
-          certificaciones. KRAM mide fill rate y venta perdida. La cobertura se declara; la ejecución se cuenta.
-          Norjal tiene el portafolio más difícil de replicar del grupo —marca propia con tracción cultural más
-          representación multicategoría— y es la única que todavía no puede acompañarlo con una cifra de ejecución
-          propia. Ahí hay una ventaja comercial sin cobrar.
+          certificaciones. La cobertura se declara; la ejecución se cuenta. Norjal tiene el portafolio más difícil
+          de replicar del grupo —marca propia con tracción cultural más representación multicategoría— y es la
+          única que todavía no puede acompañarlo con una cifra de ejecución propia. Y precisamente por ese
+          portafolio, <b>el indicador no se puede copiar de nadie</b>: una casa que a la vez desarrolla marca
+          propia y representa a terceros necesita un tablero hecho a su medida, con el corte por marca, canal y
+          cadena que cada una de las dos economías exige. Ahí está la rentabilidad por capturar.
         </p>
       </div>
 
       <p class="cap">
         Excluidos deliberadamente del benchmark: Canel's, Bondy Fiesta, Cuanda y demás fabricantes representados
-        por Norjal, porque son socios y no competidores. Brandwatch México y otros posibles comparables directos
+        por Norjal, porque son socios y no competidores; y Comercializadora KRAM, porque es cliente de London
+        Consulting Group y su caso se presenta por separado en la sección 13. Brandwatch México y otros posibles comparables directos
         no se incluyeron porque sus sitios no fueron accesibles durante la investigación.
       </p>
     </div>
@@ -1331,18 +1301,19 @@ td.nd{color:var(--n400);font-style:italic}
   <main>
     <h1 class="sr">IA y agentes</h1>
     <p class="eyebrow"><span class="num">08</span> IA y agentes</p>
-    <h2 class="sec">Seis agentes para seis decisiones que hoy se toman a ciegas</h2>
+    <h2 class="sec">Siete agentes para siete decisiones que hoy se toman a ciegas</h2>
     <p class="lede">
       El olfato de portafolio no se automatiza. Elegir qué marca desarrollar, qué sabor lanzar y con quién
       colaborar es el activo de Norjal y ahí la máquina no aporta nada. Lo que sí se puede automatizar es todo lo
-      que ocurre después de que el producto sale del almacén. Selecciona un agente para ver su cadena completa.
+      que ocurre alrededor del producto. Selecciona un agente para ver su cadena completa: el primero es el que
+      sostiene a los otros seis.
     </p>
 
     <div class="body">
       <div class="console">
         <div class="console-top">
           <span class="tag">Sistema agéntico · propuesta para Norjal</span>
-          <span class="live"><i></i>06 agentes documentados</span>
+          <span class="live"><i></i>07 agentes documentados</span>
         </div>
         <div class="console-body">
           <div class="agent-list" role="tablist" aria-label="Agentes propuestos" id="agentList"></div>
@@ -1360,7 +1331,7 @@ td.nd{color:var(--n400);font-style:italic}
         <div class="panel dark">
           <h3 class="sub" style="color:#fff">Empezar por medir, no por la tecnología</h3>
           <p style="margin-top:12px;font-size:15.5px;line-height:1.6">
-            Los seis agentes comparten una misma condición: necesitan datos limpios y consistentes que hoy pueden
+            Los siete agentes comparten una misma condición: necesitan datos limpios y consistentes que hoy pueden
             estar repartidos entre el sistema de facturación, hojas de cálculo del área comercial y reportes que
             llegan por correo. Por eso la recomendación no es empezar comprando tecnología, sino levantando la
             línea base: qué se mide hoy, dónde vive cada dato y qué tan confiable es.
@@ -1760,9 +1731,12 @@ td.nd{color:var(--n400);font-style:italic}
       <div class="callout">
         <h4>Dónde empieza en tu caso</h4>
         <p>
-          La primera parada es la <b>bifurcación A de la sección 09</b>: una sesión de dos horas con sistemas y
-          operaciones para determinar si el trabajo es de explotación de datos existentes o empieza por integración.
-          De esa respuesta depende el cronograma completo, y es la única pregunta que no podemos contestar desde fuera.
+          Primero, una <b>sesión de 45 minutos</b> para contrastar las hipótesis y evaluar juntos si tiene sentido
+          seguir. Si lo tiene, el paso siguiente es un <b>prediagnóstico de dos a tres semanas</b> con los siete
+          inputs de arriba, acotado a las hipótesis que hayan sobrevivido a esa conversación. La primera parada
+          dentro del estudio es la bifurcación A de la sección 09 —dos horas con sistemas y operaciones— porque de
+          ahí depende si el trabajo es de explotación de datos o empieza por integración, y es la única pregunta
+          que no podemos contestar desde fuera.
         </p>
       </div>
     </div>
@@ -2019,8 +1993,8 @@ td.nd{color:var(--n400);font-style:italic}
         <p>
           La agenda es simple: te presentamos las hipótesis una por una y tú nos dices cuáles ya tienes resueltas y
           cuáles no. <b>Si están mal planteadas, esa información también nos sirve</b> — y te ahorra un proyecto que
-          no necesitas. Si dos o tres resultan válidas, el siguiente paso natural es un estudio de factibilidad con
-          los siete inputs de la sección 12, que es donde se cuantifica en pesos lo que aquí solo se puede plantear
+          no necesitas. Si dos o tres resultan válidas, el siguiente paso natural es un estudio de factibilidad de
+          <b>dos a tres semanas</b> con los siete inputs de la sección 12, que es donde se cuantifica en pesos lo que aquí solo se puede plantear
           como pregunta.
         </p>
         <p style="font-size:14.5px;opacity:.9">
@@ -2160,7 +2134,15 @@ td.nd{color:var(--n400);font-style:italic}
 (function(){
   "use strict";
   var AGENTS=[
-    {n:"01",t:"Cobertura efectiva",c:"Comercial · canales",
+    {n:"01",t:"Trazabilidad de la rentabilidad",c:"Comercial · finanzas",
+     sum:"Reconstruye cuánto aporta realmente cada combinación de marca, SKU, cliente y canal después del costo de servirla. Es el agente del que dependen los otros seis.",
+     s:["Cierre mensual de resultados y revisión de rentabilidad por marca y por cuenta.",
+        "El margen se conoce a nivel compañía y por marca gruesa, pero el costo de servir —flete, exhibición, descuento, devolución y días de crédito— se reparte por prorrateo y no por lo que cada combinación realmente consume.",
+        "Reconstruye la contribución de cada combinación marca–SKU–cliente–canal asignando cada concepto de costo a la operación que lo genera, y sigue la trazabilidad desde el costo de importación hasta el peso neto.",
+        "Tablero de rentabilidad trazable con el ranking de combinaciones que aportan y las que drenan, y el concepto que explica cada diferencia.",
+        "Las decisiones de portafolio, precio y promoción dejan de discutirse sobre venta bruta y se discuten sobre contribución."],
+     pre:"Catálogo de productos y clientes con llave única, costo de importación por SKU incluidos pedimento y flete, y una política de asignación de gasto comercial y logístico acordada antes de correr nada. Ese acuerdo es la parte difícil: sin él el tablero no se sostiene ante el primer cuestionamiento."},
+    {n:"02",t:"Cobertura efectiva",c:"Comercial · canales",
      sum:"Convierte la cifra de cobertura en una lista de trabajo semanal, separando los puntos que compran de los que solo alguna vez compraron.",
      s:["Seguimiento de la base de clientes en México y Estados Unidos.",
         "La cifra de cobertura es acumulada histórica, no activa: no distingue quién compró esta semana de quién compró una vez en 2024.",
@@ -2168,7 +2150,7 @@ td.nd{color:var(--n400);font-style:italic}
         "Entrega una lista semanal de puntos dormidos, ordenada por cadena, zona y marca.",
         "La cobertura deja de ser un número de folleto y se vuelve un tablero de trabajo auditable."],
      pre:"Maestro de clientes con identificador único por punto de venta y ventas históricas de al menos doce meses, consistentes entre sistemas."},
-    {n:"02",t:"Venta perdida y agotados",c:"Comercial · servicio",
+    {n:"03",t:"Venta perdida y agotados",c:"Comercial · servicio",
      sum:"Detecta la caída anómala de compra de un cliente antes de que alguien la reporte, que es cuando todavía se puede recuperar.",
      s:["Surtido a cadenas de conveniencia, farmacia y autoservicio.",
         "El agotado se detecta cuando el comprador reclama o cuando ya cayó el pedido siguiente. Para entonces la venta se perdió.",
@@ -2176,7 +2158,7 @@ td.nd{color:var(--n400);font-style:italic}
         "Alerta priorizada por peso de la cuenta y por marca, con el histórico del cliente adjunto.",
         "Se recupera venta que hoy simplemente no aparece en ningún reporte porque nunca llegó a facturarse."],
      pre:"Histórico de pedidos y entregas por cliente y SKU. Con sell out de portales de proveedor la precisión sube mucho; sin él, el agente todavía funciona con sell in."},
-    {n:"03",t:"Pedido sugerido con lead time de Asia",c:"Compras · capital de trabajo",
+    {n:"04",t:"Pedido sugerido con lead time de Asia",c:"Compras · capital de trabajo",
      sum:"Pone números a la decisión más cara del año: cuánto contenedor comprometer meses antes de saber cómo se va a comportar la demanda.",
      s:["Compras de importación de producto terminado desde Asia.",
         "Se compromete inventario con meses de anticipación y la demanda cambia después. El error se paga en caja o en anaquel vacío.",
@@ -2184,7 +2166,7 @@ td.nd{color:var(--n400);font-style:italic}
         "Propuesta de compra con escenarios alto, base y bajo, y fecha límite de decisión por embarque.",
         "Menos capital inmovilizado y menos agotados con el mismo dinero comprometido."],
      pre:"Lead times reales por proveedor, lotes mínimos y al menos veinticuatro meses de venta por SKU. Sin el histórico largo, la estacionalidad no es distinguible del ruido."},
-    {n:"04",t:"Evaluación de promoción y trade",c:"Marketing · trade",
+    {n:"05",t:"Evaluación de promoción y trade",c:"Marketing · trade",
      sum:"Separa lo que se habría vendido igual de lo que vendió la promoción, que es la única forma de armar el presupuesto del año siguiente con evidencia.",
      s:["Inversión promocional, exhibición y material de punto de venta.",
         "La promoción se decide antes con criterio y se evalúa después por sensación. La venta sube, pero nadie sabe cuánto de eso era base.",
@@ -2192,7 +2174,7 @@ td.nd{color:var(--n400);font-style:italic}
         "Ranking de mecánicas por venta incremental generada por peso invertido.",
         "El presupuesto del año siguiente se arma con la evidencia del anterior, no con la memoria del equipo."],
      pre:"Calendario promocional con inversión asignada por cadena y SKU. Es el dato que más suele vivir en correo y presentación, y el primero que hay que estructurar."},
-    {n:"05",t:"Vida de anaquel y caducidad",c:"Operaciones · inventario",
+    {n:"06",t:"Vida de anaquel y caducidad",c:"Operaciones · inventario",
      sum:"Vigila el envejecimiento del inventario importado mientras el equipo comercial está ocupado empujando el lanzamiento más reciente.",
      s:["Control de inventario de confitería importada con vida útil limitada.",
         "El producto envejece en almacén mientras la fuerza de ventas empuja lo nuevo. Se descubre cuando ya solo queda liquidar.",
@@ -2200,7 +2182,7 @@ td.nd{color:var(--n400);font-style:italic}
         "Alerta con semanas de anticipación, con sugerencia de canal y formato de desahogo.",
         "Menos merma y menos liquidaciones de emergencia que destruyen precio en el canal."],
      pre:"Inventario con trazabilidad de lote y fecha de caducidad conectada a la salida. Si el inventario solo se lleva por SKU y no por lote, ese es el primer trabajo."},
-    {n:"06",t:"Voz del anaquel",c:"Ejecución · punto de venta",
+    {n:"07",t:"Voz del anaquel",c:"Ejecución · punto de venta",
      sum:"Convierte lo que ve el promotor en la tienda —hoy disperso en fotos y mensajes— en el indicador de ejecución que hoy no puedes ponerle enfrente a una marca.",
      s:["Visita a punto de venta por parte de promotoría propia o de agencia.",
         "Precio del competidor, exhibición, faltantes y producto dañado se quedan en la cabeza del promotor o en un grupo de mensajería.",
@@ -2234,7 +2216,7 @@ td.nd{color:var(--n400);font-style:italic}
     }).join("");
     det.innerHTML='<h3>'+esc(a.t)+'</h3><p class="sum">'+esc(a.sum)+'</p>'+
       '<div class="flow anim">'+steps+'</div>'+
-      '<div class="pre"><span class="lb">Condición previa de datos</span><p>'+esc(a.pre)+'</p></div>';
+      '<div class="agent-pre"><span class="lb">Condición previa de datos</span><p>'+esc(a.pre)+'</p></div>';
     list.querySelectorAll(".agent-btn").forEach(function(b,k){
       b.setAttribute("aria-selected", k===i?"true":"false");
       b.tabIndex = k===i?0:-1;
